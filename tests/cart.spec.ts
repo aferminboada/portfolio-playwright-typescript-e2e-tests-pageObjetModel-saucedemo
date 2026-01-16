@@ -17,6 +17,11 @@ test.describe('Cart - SauceDemo', () => {
     await expect(page).toHaveURL(/.*inventory.html/);
   });
 
+  /**
+   * Validates that items added to the cart from the inventory page appear in the cart.
+   * Risk covered: Detects failures in the add-to-cart functionality or cart display.
+   * Business value: Protects the core shopping flow by guaranteeing users can review selected items before checkout.
+   */
   test('shows items added from inventory', async ({ page }) => {
     const inventoryPage = pm.onInventoryPage();
     const cartPage = pm.onCartPage();
@@ -33,6 +38,11 @@ test.describe('Cart - SauceDemo', () => {
     await expect(cartPage.items.filter({ hasText: PRODUCT_TWO })).toBeVisible();
   });
 
+  /** 
+   * Validates item removal behavior from the cart.
+  * Risk covered: Detects failures where removed items remain in the cart or badge count is not updated.
+  * Business value: Prevents users from unintentionally purchasing unwanted items.
+   */
   test('removes an item from cart and updates the badge', async () => {
     const inventoryPage = pm.onInventoryPage();
     const cartPage = pm.onCartPage();
@@ -48,6 +58,11 @@ test.describe('Cart - SauceDemo', () => {
     await expect(inventoryPage.cartBadge).toHaveText('1');
   });
 
+  /** 
+   * Validates continue shopping behavior from the cart.
+  * Risk covered: Detects loss of cart state when returning to the inventory page.
+  * Business value: Preserves user context and prevents frustration caused by missing items after navigation.
+  */
   test('continue shopping returns to inventory and keeps items', async ({ page }) => {
     const inventoryPage = pm.onInventoryPage();
     const cartPage = pm.onCartPage();
@@ -66,6 +81,11 @@ test.describe('Cart - SauceDemo', () => {
     ).toBeVisible();
   });
 
+  /** 
+   * Validates checkout navigation from the cart.
+   * Risk covered: Detects broken checkout entry points that could block the purchase flow.
+   * Business value: Confirms the primary CTA from the cart works correctly, protecting the happy path to purchase.
+   */
   test('checkout from cart goes to checkout step one', async ({ page }) => {
     const inventoryPage = pm.onInventoryPage();
     const cartPage = pm.onCartPage();
@@ -91,7 +111,13 @@ test.describe('Cart - SauceDemo', () => {
     await expect(inventoryPage.cartBadge).toHaveCount(0);
   });
 
-  test('cart item price matches inventory price', async () => {
+
+  /** 
+   * Validates item price consistency between inventory listing and cart
+   * Risk covered: Detects data misalignment issues that could lead to incorrect charges.
+   * Business value: Prevents pricing inconsistencies that directly impact user trust and revenue.
+   * */ 
+  test('Displays consistent item price between inventory and cart', async () => {
     const inventoryPage = pm.onInventoryPage();
     const cartPage = pm.onCartPage();
 
