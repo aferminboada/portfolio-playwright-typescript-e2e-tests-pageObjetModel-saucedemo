@@ -10,8 +10,8 @@ export class InventoryPage {
   constructor(page: Page) {
     this.page = page;
     this.items = page.locator('.inventory_item');
-    this.sortSelect = page.locator('[data-test="product_sort_container"]');
-    this.cartLink = page.locator('.shopping_cart_link');
+    this.sortSelect = page.locator('[data-test="product-sort-container"]');
+    this.cartLink = page.getByRole('link', { name: /shopping cart/i });
     this.cartBadge = page.locator('.shopping_cart_badge');
   }
 
@@ -20,7 +20,10 @@ export class InventoryPage {
   }
 
   async openItemByName(name: string): Promise<void> {
-    await this.items.filter({ hasText: name }).getByRole('link', { name }).click();
+    await this.items
+      .filter({ hasText: name })
+      .locator('.inventory_item_name')
+      .click();
   }
 
   async addToCartByName(name: string): Promise<void> {
