@@ -2,7 +2,12 @@
   "name": "portfoliosauce",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:grep": "playwright test --grep",
+    "test:project": "playwright test --project"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
