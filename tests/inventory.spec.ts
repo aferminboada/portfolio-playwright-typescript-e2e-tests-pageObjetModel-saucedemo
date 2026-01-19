@@ -121,6 +121,11 @@ test.describe('Inventory - SauceDemo', () => {
     expect(valuesHiLo).toEqual(sortedHiLo);
   });
 
+  /**
+   * Validates opening product details from the inventory listing.
+   * Risk covered: Detects navigation issues that prevent users from accessing detailed product information.
+   * Business value: Ensures users can easily view product details, enhancing their understanding and confidence in making purchase decisions.  
+   */
   test('opens product details from inventory', async ({ page }) => {
     const inventoryPage = pm.onInventoryPage();
     const productDetailsPage = pm.onProductDetailsPage();
