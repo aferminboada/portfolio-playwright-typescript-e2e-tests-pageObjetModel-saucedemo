@@ -35,7 +35,6 @@ test.describe('Navigation - SauceDemo', () => {
 
   test('all items link returns to inventory', async ({ page }) => {
     const inventoryPage = pm.onInventoryPage();
-    const cartPage = pm.onCartPage();
     const nav = pm.onNavigationMenu();
 
     await inventoryPage.addToCartByName(PRODUCT_ONE);
@@ -46,7 +45,8 @@ test.describe('Navigation - SauceDemo', () => {
     await nav.goToAllItems();
 
     await expect(page).toHaveURL(/.*inventory.html/);
-    await expect(cartPage.items).toHaveCount(0);
+    await expect(inventoryPage.items.first()).toBeVisible();
+    await expect(inventoryPage.cartBadge).toHaveText('1');
   });
 
   test('logout returns to login screen', async ({ page }) => {
