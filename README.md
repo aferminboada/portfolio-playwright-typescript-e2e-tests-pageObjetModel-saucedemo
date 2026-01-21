@@ -1,4 +1,4 @@
-# Portfolio-playwright-typescript-e2e-tests-pageObjetModel-saucedemo
+# Playwright E2E Automation Portfolio
 E2E Automation testing portfolio using Playwright, TypeScript with Page Object Model. Test suite for Sauce e-commerce: login flows, shopping cart, checkout process, error handling, and cross-browser. Includes CI/CD with GitHub Actions and HTML reports. Tech Stack: Playwright | TypeScript | POM | GitHub Actions. Demo: https://www.saucedemo.com/
 
 ## Installation
