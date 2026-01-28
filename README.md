@@ -38,15 +38,16 @@ portfolio-playwright-typescript-e2e-tests-pageObjetModel-saucedemo/
 ## Automated test execution with Playwright
 - Cross-browser execution in Chromium and Firefox from VS Code
 - Headless execution via Playwright CLI with HTML reporting
-![Automated test execution](readme/test-e2e-with-playwright.gif)
+<img src="readme/test-e2e-with-playwright.gif" alt="Automated test execution" width="820" />
 
 ## Automated test execution with VS
-![Automated test execution with VS](readme/test-e2e-with-vs.gif)
+<img src="readme/test-e2e-with-vs.gif" alt="Automated test execution with VS" width="820" />
 
 ## Playwright in Action single test demo
 - In this demo, the test successful login with valid credentials runs to validate the login flow with valid credentials and confirms access to the inventory page.
 
-![Successful login demo](readme/login-successful.gif)
+## Demos
+<img src="readme/login-successful.gif" alt="Successful login demo" width="820" />
 
 ## Running Tests
 Run all tests:
