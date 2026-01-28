@@ -45,7 +45,7 @@ portfolio-playwright-typescript-e2e-tests-pageObjetModel-saucedemo/
 
 ## Playwright in Action single test demo
 - In this demo, the test successful login with valid credentials runs to validate the login flow with valid credentials and confirms access to the inventory page.
-![Playwright in Action single test demo](readme/Login-successful-gif.gif)
+![Playwright in Action single test demo](readme/login-successful-gif.gif)
 
 ## Running Tests
 Run all tests:
