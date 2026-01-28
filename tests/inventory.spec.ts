@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './test-setup';
 import { PageManager } from '../page-objects/pageManager';
 import { loginData } from '../test-data/loginData';
 
