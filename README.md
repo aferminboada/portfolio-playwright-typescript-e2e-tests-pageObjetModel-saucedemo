@@ -35,6 +35,12 @@ portfolio-playwright-typescript-e2e-tests-pageObjetModel-saucedemo/
 ├─ package.json
 └─ README.md
 ```
+## Automated test execution with Playwright
+- Cross-browser execution in Chromium and Firefox from VS Code
+- Headless execution via Playwright CLI with HTML reporting
+![Automated test execution](readme/test-e2e-with-playwright.gif)
+
+## Automated test execution with VS
 
 ## Running Tests
 Run all tests:
