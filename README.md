@@ -43,10 +43,8 @@ portfolio-playwright-typescript-e2e-tests-pageObjetModel-saucedemo/
 ## Automated test execution with VS
 <img src="readme/test-e2e-with-vs.gif" alt="Automated test execution with VS" width="820" />
 
-## Playwright in Action single test demo
+## Demos: Playwright in Action single test demo
 - In this demo, the test successful login with valid credentials runs to validate the login flow with valid credentials and confirms access to the inventory page.
-
-## Demos
 <img src="readme/login-successful.gif" alt="Successful login demo" width="820" />
 
 ## Running Tests
