@@ -41,6 +41,7 @@ portfolio-playwright-typescript-e2e-tests-pageObjetModel-saucedemo/
 ![Automated test execution](readme/test-e2e-with-playwright.gif)
 
 ## Automated test execution with VS
+![Automated test execution with VS](readme/test-e2e-with-vs.gif)
 
 ## Running Tests
 Run all tests:
